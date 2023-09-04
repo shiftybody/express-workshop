@@ -4,17 +4,29 @@
   "description": "API REST with Node.JS",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiftybody/express-workshop.git"
+  },
   "keywords": [
-    "API",
-    "REST",
-    "Express",
-    "Node.JS"
+    "node",
+    "express",
+    "jwt",
+    "mysql"
   ],
   "author": "David Cano",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiftybody/express-workshop/issues"
+  },
+  "homepage": "https://github.com/shiftybody/express-workshop#README.md",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
