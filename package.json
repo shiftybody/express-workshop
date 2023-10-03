@@ -25,6 +25,7 @@
   "homepage": "https://github.com/shiftybody/express-workshop#README.md",
   "dependencies": {
     "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
