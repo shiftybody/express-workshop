@@ -4,7 +4,7 @@ const user = express.Router();
 const db = require('../config/database');
 
 // post a new user
-user.post('/', async (req, res, next) => {
+user.post('/signin', async (req, res, next) => {
 
     const { user_name, user_mail, user_password } = req.body
 
@@ -12,7 +12,7 @@ user.post('/', async (req, res, next) => {
 
         let query = "INSERT INTO user (user_name, user_mail, user_password)";
         query += ` VALUES('${user_name}', '${user_mail}', '${user_password}') `;
-        const rows = await db.query(query);
+	const rows = await db.query(query);
 
         if (rows.affectedRows == 1) {
             return res.status(201).json({ code: 201, message: "Usuario regitrado correctamente" });
