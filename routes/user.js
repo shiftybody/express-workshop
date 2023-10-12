@@ -17,9 +17,9 @@ user.post("/signin", async (req, res, next) => {
         .status(201)
         .json({ code: 201, message: "Usuario regitrado correctamente" });
     }
-    return res.status(500).json({ code: 500, message: "Ocurrio in error" });
+    return res.status(200).json({ code: 500, message: "Ocurrio in error" });
   }
-  return res.status(500).json({ code: 500, message: "Campos incompletos" });
+  return res.status(200).json({ code: 500, message: "Campos incompletos" });
 });
 
 // login
@@ -41,10 +41,10 @@ user.post("/login", async (req, res, next) => {
     } else {
       return res
         .status(200)
-        .json({ code: 200, message: "Usuario y/o contraseña incorrectos" });
+        .json({ code: 401, message: "Usuario y/o contraseña incorrectos" });
     }
   }
-  return res.status(500).json({ code: 500, message: "Campos incompletos" });
+  return res.status(200).json({ code: 500, message: "Campos incompletos" });
 });
 
 // get all users
